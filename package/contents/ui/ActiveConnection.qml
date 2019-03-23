@@ -37,10 +37,7 @@ Item {
     property bool ddwrtConnection: DeviceName === 'DD-WRT'
 
     function formatBytes(bytes) {
-        if (showBits) {
-            return Helper.transformNumber(bytes * 8, 1000, 3, ['b', 'K', 'M', 'G', 'T', 'P'])
-        }
-        return Helper.transformNumber(bytes, 1024, 3, ['B', 'K', 'M', 'G', 'T', 'P'])
+        return Helper.transformNumber(bytes, 1000, 3, ['b', 'K', 'M', 'G', 'T', 'P'])
     }
     
     ListModel {
